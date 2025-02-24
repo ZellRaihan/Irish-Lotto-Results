@@ -12,64 +12,43 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full bg-gradient-to-b from-white/80 via-white/60 to-white/40 backdrop-blur-xl">
-        {/* Animated border gradient */}
-        <div className="absolute inset-x-0 -bottom-px h-px animate-border-gradient bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
-        
-        {/* Glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-green-500/5 to-teal-500/5" />
-
-        <div className="container px-4 py-2 mx-auto relative">
+      <header className="sticky top-0 z-50 w-full bg-white">
+        <div className="container px-4 py-2 mx-auto">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group relative">
+            <Link href="/" className="flex items-center space-x-3">
               <div className="hidden md:flex items-center space-x-3">
-                <div className="relative overflow-hidden rounded-2xl transition-all duration-500 group-hover:scale-105 group-hover:rotate-3">
-                  {/* Logo glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 via-green-500/20 to-teal-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
+                <div className="relative">
                   <Image
                     src="/Irish Lotto Results.webp"
                     alt="Irish Lotto Logo"
                     width={44}
                     height={44}
-                    className="transform transition-all duration-500 group-hover:scale-110 relative z-10"
                     priority
                   />
-                  <div className="absolute inset-0 ring-1 ring-inset ring-white/10 group-hover:ring-emerald-100/20 transition-all duration-500" />
-                  
-                  {/* Animated corner accents */}
-                  <div className="absolute h-2 w-2 border-t border-l border-emerald-500/50 top-0 left-0" />
-                  <div className="absolute h-2 w-2 border-t border-r border-emerald-500/50 top-0 right-0" />
-                  <div className="absolute h-2 w-2 border-b border-l border-emerald-500/50 bottom-0 left-0" />
-                  <div className="absolute h-2 w-2 border-b border-r border-emerald-500/50 bottom-0 right-0" />
                 </div>
                 <div className="hidden sm:block">
-                  <div className="text-2xl font-bold bg-gradient-to-r from-emerald-600 via-green-500 to-teal-500 bg-clip-text text-transparent hover:from-emerald-500 hover:via-green-400 hover:to-teal-400 transition-all duration-500">
+                  <div className="text-2xl font-bold text-gray-900">
                     Irish Lotto
                   </div>
-                  <p className="text-xs bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 bg-clip-text text-transparent font-medium">Results & History</p>
+                  <p className="text-xs font-medium text-gray-600">Results & History</p>
                 </div>
               </div>
-              
               {/* Mobile Logo */}
               <div className="flex md:hidden items-center gap-2">
                 <div className="flex items-center gap-3">
-                  <div className="relative overflow-hidden rounded-xl">
-                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 via-green-500/20 to-teal-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative">
                     <Image
                       src="/Irish Lotto Results.webp"
                       alt="Irish Lotto Logo"
                       width={36}
                       height={36}
-                      className="transform transition-all duration-500 group-hover:scale-110 relative z-10"
                       priority
                     />
-                    <div className="absolute inset-0 ring-1 ring-inset ring-white/10 group-hover:ring-emerald-100/20 transition-all duration-500" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-lg font-bold bg-gradient-to-r from-emerald-600 via-green-500 to-teal-500 bg-clip-text text-transparent">Irish Lotto</span>
-                    <span className="text-xs bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 bg-clip-text text-transparent font-medium">Results & History</span>
+                    <span className="text-lg font-bold text-gray-900">Irish Lotto</span>
+                    <span className="text-xs font-medium text-gray-600">Results & History</span>
                   </div>
                 </div>
               </div>
