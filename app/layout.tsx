@@ -8,6 +8,7 @@ import JsonLd from '@/components/json-ld'
 import { LoadingProvider } from "@/components/loading-provider"
 import { cn } from '@/lib/utils'
 import Script from 'next/script'
+import { Suspense } from 'react'
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -123,13 +124,17 @@ export default function RootLayout({
       </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased", inter.className)}>
         <div className="relative flex min-h-screen flex-col">
-          <Header />
+          <Suspense fallback={<div className="h-16 bg-white/80 backdrop-blur-xl"></div>}>
+            <Header />
+          </Suspense>
           <div className="flex-1">
-            <LoadingProvider>
-              <main className="py-6">
-                {children}
-              </main>
-            </LoadingProvider>
+            <Suspense fallback={<div className="py-6">{children}</div>}>
+              <LoadingProvider>
+                <main className="py-6">
+                  {children}
+                </main>
+              </LoadingProvider>
+            </Suspense>
           </div>
           <Footer />
         </div>
