@@ -49,10 +49,10 @@ export default function JsonLd({ type, data }: JsonLdProps) {
         itemListElement: data.items.map((item: any, index: number) => ({
           "@type": "ListItem",
           position: index + 1,
-          name: item.label,
+          name: item.label || item.name || "",
           item: {
             "@type": "Thing",
-            "@id": `https://irishlottoonline.com${item.href || ''}`,
+            "@id": `https://irishlottoonline.com${item.href || item.url || ''}`,
           },
         })),
       };
