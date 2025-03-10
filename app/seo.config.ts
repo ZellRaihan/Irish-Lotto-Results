@@ -38,9 +38,9 @@ export const siteConfig = {
     "Irish Lotto Checker"
   ],
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_ID",
-    bing: "YOUR_BING_VERIFICATION_ID",
-    yandex: "YOUR_YANDEX_VERIFICATION_ID"
+    google: process.env.GOOGLE_VERIFICATION_ID || "",
+    bing: process.env.BING_VERIFICATION_ID || "",
+    yandex: process.env.YANDEX_VERIFICATION_ID || ""
   }
 }
 

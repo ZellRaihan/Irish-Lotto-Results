@@ -1,10 +1,10 @@
-# https://irishlottoresults.co.uk/robots.txt
+# https://irishlottoonline.com/robots.txt
 # Allow all crawlers
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://irishlottoresults.co.uk/sitemap.xml
+Sitemap: https://irishlottoonline.com/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 1
